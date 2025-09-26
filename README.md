@@ -10,11 +10,9 @@ class Carta:
         self.defesa = defesa
         self.magia = magia
 
-def __str__(self):
+    def __str__(self):
         return f"{self.nome} (Ataque: {self.ataque}, Defesa: {self.defesa}, Magia: {self.magia})"
-```
 
-```python
 # super_trunfo.py
 from carta import Carta
 import random
@@ -34,15 +32,21 @@ class SuperTrunfo:
         self.computador = self.cartas[3:]
         self.pontos = 0
 
-    def jogar_rodada(self):
+ def jogar_rodada(self):
         carta_jogador = self.jogador.pop(0)
         carta_computador = self.computador.pop(0)
         print(f"Sua carta: {carta_jogador}")
         atributo = input("Escolha o atributo (ataque, defesa, magia): ").strip().lower()
+
+        if atributo not in ["ataque", "defesa", "magia"]:
+            print("Atributo inválido. Você perde esta rodada.\n")
+            return -1
+
         valor_jogador = getattr(carta_jogador, atributo)
         valor_computador = getattr(carta_computador, atributo)
         print(f"Carta do computador: {carta_computador}")
         print(f"Seu {atributo}: {valor_jogador} | Computador {atributo}: {valor_computador}")
+
         if valor_jogador > valor_computador:
             print("Você venceu a rodada!\n")
             return 1
@@ -64,7 +68,6 @@ class SuperTrunfo:
             print("O computador venceu o jogo!")
         else:
             print("O jogo terminou empatado!")
-```
 
 
 
