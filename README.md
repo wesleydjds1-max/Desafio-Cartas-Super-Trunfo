@@ -1,8 +1,20 @@
-# Desafio-Cartas-Super-Trunfo
+ Desafio-Cartas-Super-Trunfo
 
-    ## Exemplo de código do jogo
-    ```python
-# carta.py
+Este projeto é uma implementação simples do jogo Super Trunfo em Python. O objetivo é comparar cartas com diferentes atributos e tentar vencer o computador em rodadas de escolha de atributos.
+
+## Como funciona
+
+- Cada carta possui três atributos: **ataque**, **defesa** e **magia**.
+- No início do jogo, as cartas são embaralhadas e distribuídas entre o jogador e o computador.
+- Em cada rodada, o jogador escolhe um atributo para disputar.
+- Quem tiver o maior valor no atributo escolhido vence a rodada.
+- O jogo termina após três rodadas e o vencedor é anunciado.
+
+## Exemplo de código
+
+```python
+import random
+
 class Carta:
     def __init__(self, nome, ataque, defesa, magia):
         self.nome = nome
@@ -12,10 +24,6 @@ class Carta:
 
     def __str__(self):
         return f"{self.nome} (Ataque: {self.ataque}, Defesa: {self.defesa}, Magia: {self.magia})"
-
-# super_trunfo.py
-from carta import Carta
-import random
 
 class SuperTrunfo:
     def __init__(self):
@@ -32,7 +40,7 @@ class SuperTrunfo:
         self.computador = self.cartas[3:]
         self.pontos = 0
 
- def jogar_rodada(self):
+    def jogar_rodada(self):
         carta_jogador = self.jogador.pop(0)
         carta_computador = self.computador.pop(0)
         print(f"Sua carta: {carta_jogador}")
@@ -69,6 +77,24 @@ class SuperTrunfo:
         else:
             print("O jogo terminou empatado!")
 
+if __name__ == "__main__":
+    jogo = SuperTrunfo()
+    jogo.jogar()
+```
+
+## Como executar
+
+1. Certifique-se de ter o Python 3 instalado em seu computador.
+2. Salve o código acima em um arquivo chamado `super_trunfo.py`.
+3. Execute no terminal com:
+   ```bash
+   python super_trunfo.py
+   ```
+4. Siga as instruções exibidas para jogar.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
 
 
 
