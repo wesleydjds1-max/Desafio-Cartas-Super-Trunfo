@@ -8,7 +8,7 @@ Este projeto é uma implementação simples do jogo Super Trunfo em Python. O ob
 - No início do jogo, as cartas são embaralhadas e distribuídas entre o jogador e o computador.
 - Em cada rodada, o jogador escolhe um atributo para disputar.
 - Quem tiver o maior valor no atributo escolhido vence a rodada.
-- O jogo termina após três rodadas e o vencedor é anunciado.
+- O jogo termina após três rodadas, e o vencedor é anunciado.
 
 ## Exemplo de código
 
