@@ -1,6 +1,6 @@
- Desafio Cartas Super Trunfo
+ Desafio Cartas SuperTrunfo
 
-Este projeto é uma implementação simples do jogo Super Trunfo em Python. O objetivo é comparar cartas com diferentes atributos e tentar vencer o computador em rodadas de escolha de atributos.
+Este projeto é uma implementação simples do jogo SuperTrunfo em Python. O objetivo é comparar cartas com diferentes atributos e tentar vencer o computador em rodadas de escolha de atributos.
 
 ## Como funciona
 
