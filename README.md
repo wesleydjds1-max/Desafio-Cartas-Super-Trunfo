@@ -1,10 +1,10 @@
- Desafio-Cartas-Super-Trunfo
+ Desafio Cartas Super Trunfo
 
 Este projeto é uma implementação simples do jogo Super Trunfo em Python. O objetivo é comparar cartas com diferentes atributos e tentar vencer o computador em rodadas de escolha de atributos.
 
 ## Como funciona
 
-- Cada carta possui três atributos: **ataque**, **defesa** e **magia**.
+- Cada carta possui três atributos: **ataque,** **defesa** e **magia.**
 - No início do jogo, as cartas são embaralhadas e distribuídas entre o jogador e o computador.
 - Em cada rodada, o jogador escolhe um atributo para disputar.
 - Quem tiver o maior valor no atributo escolhido vence a rodada.
