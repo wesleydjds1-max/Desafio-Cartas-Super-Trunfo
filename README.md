@@ -53,6 +53,7 @@ super_trunfo/
 ├── super_trunfo.c      # Código fonte em C
 ├── README.md           # Descrição do projeto
 
+
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT.
