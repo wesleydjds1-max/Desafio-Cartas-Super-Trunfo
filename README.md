@@ -47,15 +47,6 @@ O programa calcula automaticamente:
 5. Siga as instruções para cadastrar as cartas.
 
 
-## Estrutura do Projeto
-O projeto possui a seguinte estrutura de arquivos:
-
-super_trunfo/
-│
-├── super_trunfo.c    # Código fonte em C contendo o sistema de cadastro de cartas
-├── README.md         # Documento com a descrição e instruções do projeto
-
-
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT.
