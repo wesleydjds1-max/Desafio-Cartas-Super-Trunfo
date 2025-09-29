@@ -91,7 +91,7 @@ Para contribuir:
 
 - Abra um Pull Request.
 
-📜 Licença
+## 📜 Licença
 Este projeto está licenciado sob a Licença MIT.
 Você pode usar, modificar e distribuir livremente o código, desde que mantenha os créditos ao autor.
 
