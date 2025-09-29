@@ -48,10 +48,12 @@ O programa calcula automaticamente:
 
 
 ## Estrutura do Projeto
+O projeto possui a seguinte estrutura de arquivos:
+
 super_trunfo/
 │
-├── super_trunfo.c      # Código fonte em C
-├── README.md           # Descrição do projeto
+├── super_trunfo.c    # Código fonte em C contendo o sistema de cadastro de cartas
+├── README.md         # Documento com a descrição e instruções do projeto
 
 
 ## Licença
