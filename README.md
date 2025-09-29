@@ -81,15 +81,15 @@ Siga as instruções para cadastrar as cartas.
 Contribuições são bem-vindas!
 Para contribuir:
 
-Faça um fork deste repositório.
+- Faça um fork deste repositório.
 
-Crie uma branch com sua modificação (git checkout -b minha-contribuicao).
+- Crie uma branch com sua modificação (git checkout -b minha-contribuicao).
 
-Commit suas alterações (git commit -m "Minha contribuição").
+- Commit suas alterações (git commit -m "Minha contribuição").
 
-Push para a branch (git push origin minha-contribuicao).
+- Push para a branch (git push origin minha-contribuicao).
 
-Abra um Pull Request.
+- Abra um Pull Request.
 
 📜 Licença
 Este projeto está licenciado sob a Licença MIT.
