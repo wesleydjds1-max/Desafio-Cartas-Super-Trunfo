@@ -1,6 +1,6 @@
-# Super Trunfo Países - Cadastro de Cartas
+# SuperTrunfo Países - Cadastro de Cartas
 
-A **TechNova** apresenta este projeto como parte do desenvolvimento de um jogo de **Super Trunfo** com tema "Países". Este programa em **C** permite cadastrar cartas com informações detalhadas sobre cidades, incluindo atributos básicos e propriedades derivadas, como densidade populacional e PIB per capita.
+A **TechNova** apresenta este projeto como parte do desenvolvimento de um jogo de **SuperTrunfo** com tema "Países". Este programa em **C** permite cadastrar cartas com informações detalhadas sobre cidades, incluindo atributos básicos e propriedades derivadas, como densidade populacional e PIB per capita.
 
 ## Objetivo
 
