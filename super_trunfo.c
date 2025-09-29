@@ -1,113 +1,94 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-#define MAX_CARTAS 100
-#define MAX_NOME 50
+#define MAX_CARTAS 50
 
 typedef struct {
-    char nome[MAX_NOME];
+    char estado[30];
+    int codigo;
+    char nome[50];
     int populacao;
-    float area;
     double pib;
-    float idh;
-} CartaPais;
+    double area;
+    int pontos_turisticos;
+    double densidade_populacional;
+    double pib_per_capita;
+} CartaCidade;
 
-// Função para carregar cartas de um arquivo CSV
-int carregarCartas(CartaPais baralho[], const char *nomeArquivo) {
-    FILE *fp = fopen(nomeArquivo, "r");
-    if (!fp) {
-        printf("Erro ao abrir o arquivo '%s'.\n", nomeArquivo);
-        return -1;
-    }
+// Função para calcular propriedades derivadas
+void calcularPropriedades(CartaCidade *carta) {
+    if (carta->area > 0)
+        carta->densidade_populacional = carta->populacao / carta->area;
+    else
+        carta->densidade_populacional = 0;
 
-    int i = 0;
-    while (fscanf(fp, "%49[^,],%d,%f,%lf,%f\n",
-                  baralho[i].nome,
-                  &baralho[i].populacao,
-                  &baralho[i].area,
-                  &baralho[i].pib,
-                  &baralho[i].idh) == 5) {
-        i++;
-        if (i >= MAX_CARTAS) break;
-    }
-    fclose(fp);
-    return i;
+    if (carta->populacao > 0)
+        carta->pib_per_capita = carta->pib / carta->populacao;
+    else
+        carta->pib_per_capita = 0;
+}
+
+// Função para registrar uma carta
+void registrarCarta(CartaCidade *carta) {
+    printf("Estado: ");
+    scanf(" %[^\n]", carta->estado);
+
+    printf("Código da cidade: ");
+    scanf("%d", &carta->codigo);
+
+    printf("Nome da cidade: ");
+    scanf(" %[^\n]", carta->nome);
+
+    printf("População: ");
+    scanf("%d", &carta->populacao);
+
+    printf("PIB (em reais): ");
+    scanf("%lf", &carta->pib);
+
+    printf("Área (em km²): ");
+    scanf("%lf", &carta->area);
+
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &carta->pontos_turisticos);
+
+    calcularPropriedades(carta);
 }
 
 // Função para exibir uma carta
-void exibirCarta(CartaPais carta) {
-    printf("País: %s\n", carta.nome);
-    printf("População: %d\n", carta.populacao);
-    printf("Área: %.2f km²\n", carta.area);
-    printf("PIB: %.2lf USD\n", carta.pib);
-    printf("IDH: %.2f\n", carta.idh);
-    printf("------------------------\n");
-}
-
-// Função para comparar cartas por atributo
-int compararCartas(CartaPais c1, CartaPais c2, int atributo) {
-    switch (atributo) {
-        case 1: // População
-            return (c1.populacao > c2.populacao) ? 1 : (c1.populacao < c2.populacao) ? -1 : 0;
-        case 2: // Área
-            return (c1.area > c2.area) ? 1 : (c1.area < c2.area) ? -1 : 0;
-        case 3: // PIB
-            return (c1.pib > c2.pib) ? 1 : (c1.pib < c2.pib) ? -1 : 0;
-        case 4: // IDH
-            return (c1.idh > c2.idh) ? 1 : (c1.idh < c2.idh) ? -1 : 0;
-        default:
-            return 0;
-    }
-}
-
-// Função para mostrar os atributos disponíveis
-void mostrarAtributos() {
-    printf("Escolha o atributo para comparar:\n");
-    printf("1 - População\n");
-    printf("2 - Área\n");
-    printf("3 - PIB\n");
-    printf("4 - IDH\n");
+void exibirCarta(const CartaCidade *carta) {
+    printf("\n-------- Carta da Cidade --------\n");
+    printf("Estado: %s\n", carta->estado);
+    printf("Código: %d\n", carta->codigo);
+    printf("Nome: %s\n", carta->nome);
+    printf("População: %d\n", carta->populacao);
+    printf("PIB: %.2lf\n", carta->pib);
+    printf("Área: %.2lf km²\n", carta->area);
+    printf("Pontos turísticos: %d\n", carta->pontos_turisticos);
+    printf("Densidade Populacional: %.2lf hab/km²\n", carta->densidade_populacional);
+    printf("PIB per capita: %.2lf reais\n", carta->pib_per_capita);
+    printf("---------------------------------\n");
 }
 
 int main() {
-    CartaPais baralho[MAX_CARTAS];
-    int totalCartas = carregarCartas(baralho, "paises.csv");
+    int n, i;
+    CartaCidade cartas[MAX_CARTAS];
 
-    if (totalCartas <= 0) {
-        printf("Nenhuma carta carregada.\n");
+    printf("Quantas cartas deseja registrar? (Máximo %d): ", MAX_CARTAS);
+    scanf("%d", &n);
+
+    if (n <= 0 || n > MAX_CARTAS) {
+        printf("Número inválido!\n");
         return 1;
     }
 
-    // Distribuição simples: metade para cada jogador (modo demonstração)
-    int metade = totalCartas / 2;
-    int cartasJogador1 = metade;
-    int cartasJogador2 = totalCartas - metade;
+    for (i = 0; i < n; i++) {
+        printf("\n== Registrando carta %d ==\n", i + 1);
+        registrarCarta(&cartas[i]);
+    }
 
-    int idx1 = 0, idx2 = metade;
+    printf("\nExibindo todas as cartas:\n");
+    for (i = 0; i < n; i++) {
+        exibirCarta(&cartas[i]);
+    }
 
-    printf("SuperTrunfo de Países - Demonstração\n");
-    printf("Total de cartas: %d\n\n", totalCartas);
-
-    // Exemplo de rodada única
-    printf("Jogador 1:\n");
-    exibirCarta(baralho[idx1]);
-    printf("Jogador 2:\n");
-    exibirCarta(baralho[idx2]);
-
-    int atributo;
-    mostrarAtributos();
-    printf("Jogador 1, escolha o atributo (1-4): ");
-    scanf("%d", &atributo);
-
-    int resultado = compararCartas(baralho[idx1], baralho[idx2], atributo);
-    if (resultado == 1)
-        printf("Jogador 1 vence a rodada!\n");
-    else if (resultado == -1)
-        printf("Jogador 2 vence a rodada!\n");
-    else
-        printf("Empate!\n");
-
-    // Você pode expandir para rodadas, controle de cartas e fim de jogo
     return 0;
 }
