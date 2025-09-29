@@ -1,3 +1,8 @@
+Percebi alguns pequenos erros de formatação no seu README.md 😄. Aqui está a versão corrigida para copiar e colar, já ajustada para Markdown funcionar perfeitamente no GitHub:
+
+---
+
+````markdown
 # SuperTrunfo Países - Cadastro de Cartas
 
 Este é um **projeto acadêmico** desenvolvido como parte das atividades da disciplina de Programação em Linguagem C da minha universidade.  
@@ -44,11 +49,14 @@ O programa calcula automaticamente:
 3. Compile o código:
    ```bash
    gcc super_trunfo.c -o super_trunfo
-5. Execute o programa:
- ```bash
- ./super_trunfo
-7. Siga as instruções para cadastrar as cartas.
+````
 
+4. Execute o programa:
+
+   ```bash
+   ./super_trunfo
+   ```
+5. Siga as instruções para cadastrar as cartas.
 
 ## Licença
 
@@ -56,4 +64,5 @@ Este projeto está licenciado sob a Licença MIT.
 Você pode usar, modificar e distribuir livremente o código, desde que mantenha os créditos ao autor.
 
 📌 Projeto desenvolvido como exercício de programação em C, focado em lógica, manipulação de dados e cálculos matemáticos.
-   
+
+```
