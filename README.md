@@ -1,30 +1,47 @@
 
-# Desafio Cartas SuperTrunfo
+# SuperTrunfo de Países em C
 
-Este projeto é uma implementação simples do jogo SuperTrunfo em C. O objetivo é comparar cartas com diferentes atributos e tentar vencer o computador em rodadas de escolha de atributos.
+## Descrição
+Jogo de cartas SuperTrunfo com tema de países. Cada carta representa um país com atributos numéricos (população, área, PIB, IDH).
 
 ## Como funciona
 
-- Cada carta possui três atributos: **ataque,** **defesa** e **magia.**
-- No início do jogo, as cartas são embaralhadas e distribuídas entre o jogador e o computador.
-- Em cada rodada, o jogador escolhe um atributo para disputar.
-- Quem tiver o maior valor no atributo escolhido vence a rodada.
-- O jogo termina após três rodadas, e o vencedor é anunciado.
+- Cartas são carregadas de um arquivo CSV (`paises.csv`).
+- Cada jogador recebe uma quantidade igual de cartas.
+- Em cada rodada, um atributo é escolhido para comparação.
+- Quem tiver o maior valor leva a carta do adversário.
+- O jogo termina quando um jogador fica com todas as cartas.
 
-## Como executar
+## Estrutura dos arquivos
 
-1. Certifique-se de ter o compilador GCC instalado em seu computador.
-2. Salve o código do jogo em um arquivo chamado `super_trunfo.c`.
-3. Compile o programa no terminal com:
-   ```bash
-   gcc super_trunfo.c -o super_trunfo
-   ```
-4. Execute o jogo:
-   ```bash
-   ./super_trunfo
-   ```
-5. Siga as instruções exibidas para jogar.
+- `main.c`: Código principal do jogo.
+- `cartas.h` / `cartas.c`: Funções para lidar com cartas.
+- `paises.csv`: Lista de países e atributos.
+- `README.md`: Explicação do projeto.
 
-## Licença
+## Exemplo de entrada (paises.csv)
 
-Este projeto está licenciado sob a licença MIT.
+```
+País,População,Área,PIB,IDH
+Brasil,214000000,8515767.00,1847000000000.00,0.754
+Estados Unidos,331000000,9833520.00,22675271000000.00,0.921
+...
+```
+
+## Como compilar
+
+```bash
+gcc main.c cartas.c -o supertrunfo
+```
+
+## Como rodar
+
+```bash
+./supertrunfo
+```
+
+## O que implementar
+
+- Lógica do jogo (distribuição das cartas, rodadas, comparação, vencedor)
+- Interface interativa no console
+- Estatísticas finais (opcional)
