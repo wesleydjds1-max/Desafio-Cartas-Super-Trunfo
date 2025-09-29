@@ -1,102 +1,143 @@
- Desafio Cartas SuperTrunfo
+README.md
+# Desafio Cartas SuperTrunfo - Países
 
-Este projeto é uma implementação simples do jogo SuperTrunfo em Python. O objetivo é comparar cartas com diferentes atributos e tentar vencer o computador em rodadas de escolha de atributos.
+Este projeto é uma implementação simples do jogo **SuperTrunfo** em **C**.  
+O objetivo é comparar cartas de países com diferentes atributos e tentar vencer o computador em rodadas de escolha de atributos.
 
 ## Como funciona
 
-- Cada carta possui três atributos: **ataque,** **defesa** e **magia.**
+- Cada carta representa um país e possui três atributos: **população**, **PIB** e **área**.
 - No início do jogo, as cartas são embaralhadas e distribuídas entre o jogador e o computador.
 - Em cada rodada, o jogador escolhe um atributo para disputar.
 - Quem tiver o maior valor no atributo escolhido vence a rodada.
 - O jogo termina após três rodadas, e o vencedor é anunciado.
 
-## Exemplo de código
-
-```python
-import random
-
-class Carta:
-    def __init__(self, nome, ataque, defesa, magia):
-        self.nome = nome
-        self.ataque = ataque
-        self.defesa = defesa
-        self.magia = magia
-
-    def __str__(self):
-        return f"{self.nome} (Ataque: {self.ataque}, Defesa: {self.defesa}, Magia: {self.magia})"
-
-class SuperTrunfo:
-    def __init__(self):
-        self.cartas = [
-            Carta("Dragão", 9, 7, 8),
-            Carta("Mago", 6, 5, 10),
-            Carta("Guerreiro", 8, 9, 4),
-            Carta("Elfo", 7, 6, 9),
-            Carta("Orc", 10, 8, 3),
-            Carta("Fada", 5, 4, 10)
-        ]
-        random.shuffle(self.cartas)
-        self.jogador = self.cartas[:3]
-        self.computador = self.cartas[3:]
-        self.pontos = 0
-
-    def jogar_rodada(self):
-        carta_jogador = self.jogador.pop(0)
-        carta_computador = self.computador.pop(0)
-        print(f"Sua carta: {carta_jogador}")
-        atributo = input("Escolha o atributo (ataque, defesa, magia): ").strip().lower()
-
-        if atributo not in ["ataque", "defesa", "magia"]:
-            print("Atributo inválido. Você perde esta rodada.\n")
-            return -1
-
-        valor_jogador = getattr(carta_jogador, atributo)
-        valor_computador = getattr(carta_computador, atributo)
-        print(f"Carta do computador: {carta_computador}")
-        print(f"Seu {atributo}: {valor_jogador} | Computador {atributo}: {valor_computador}")
-
-        if valor_jogador > valor_computador:
-            print("Você venceu a rodada!\n")
-            return 1
-        elif valor_jogador < valor_computador:
-            print("Você perdeu a rodada!\n")
-            return -1
-        else:
-            print("Empate!\n")
-            return 0
-
-    def jogar(self):
-        pontos = 0
-        for _ in range(3):
-            pontos += self.jogar_rodada()
-        print(f"Pontuação final: {pontos}")
-        if pontos > 0:
-            print("Parabéns, você venceu o jogo!")
-        elif pontos < 0:
-            print("O computador venceu o jogo!")
-        else:
-            print("O jogo terminou empatado!")
-
-if __name__ == "__main__":
-    jogo = SuperTrunfo()
-    jogo.jogar()
-```
-
 ## Como executar
 
-1. Certifique-se de ter o Python 3 instalado em seu computador.
-2. Salve o código acima em um arquivo chamado `super_trunfo.py`.
-3. Execute no terminal com:
-   ```bash
-   python super_trunfo.py
-   ```
-4. Siga as instruções exibidas para jogar.
+### Pré-requisitos
+- Compilador C instalado (ex: `gcc`).
 
-## Licença
+### Passos
+1. Clone ou baixe o projeto.
+2. Compile o programa:
+   ```bash
+   gcc main.c -o super_trunfo
+
+
+Execute o programa:
+
+./super_trunfo
+
+Licença
 
 Este projeto está licenciado sob a licença MIT.
 
 
+---
+
+### main.c
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#define NUM_CARTAS 6
+
+typedef struct {
+    char nome[50];
+    long populacao;
+    double pib; // em trilhões
+    double area; // em km²
+} Carta;
+
+// Função para embaralhar as cartas
+void embaralhar(Carta cartas[], int n) {
+    for (int i = n - 1; i > 0; i--) {
+        int j = rand() % (i + 1);
+        Carta temp = cartas[i];
+        cartas[i] = cartas[j];
+        cartas[j] = temp;
+    }
+}
+
+// Função para jogar uma rodada
+int jogar_rodada(Carta jogador, Carta computador) {
+    printf("\nSua carta: %s (População: %ld, PIB: %.2lf, Área: %.2lf)\n",
+           jogador.nome, jogador.populacao, jogador.pib, jogador.area);
+
+    char atributo[20];
+    printf("Escolha o atributo (populacao, pib, area): ");
+    scanf("%s", atributo);
+
+    double valor_jogador = 0, valor_computador = 0;
+
+    if (strcmp(atributo, "populacao") == 0) {
+        valor_jogador = jogador.populacao;
+        valor_computador = computador.populacao;
+    } else if (strcmp(atributo, "pib") == 0) {
+        valor_jogador = jogador.pib;
+        valor_computador = computador.pib;
+    } else if (strcmp(atributo, "area") == 0) {
+        valor_jogador = jogador.area;
+        valor_computador = computador.area;
+    } else {
+        printf("Atributo inválido. Você perde esta rodada.\n");
+        return -1;
+    }
+
+    printf("Carta do computador: %s (População: %ld, PIB: %.2lf, Área: %.2lf)\n",
+           computador.nome, computador.populacao, computador.pib, computador.area);
+
+    printf("Seu %s: %.2lf | Computador %s: %.2lf\n", atributo, valor_jogador, atributo, valor_computador);
+
+    if (valor_jogador > valor_computador) {
+        printf("Você venceu a rodada!\n");
+        return 1;
+    } else if (valor_jogador < valor_computador) {
+        printf("Você perdeu a rodada!\n");
+        return -1;
+    } else {
+        printf("Empate!\n");
+        return 0;
+    }
+}
+
+int main() {
+    srand(time(NULL));
+
+    Carta cartas[NUM_CARTAS] = {
+        {"Brasil", 213000000, 1.44, 8516000},
+        {"China", 1440000000, 14.34, 9597000},
+        {"Estados Unidos", 331000000, 21.43, 9834000},
+        {"Alemanha", 83000000, 4.00, 357000},
+        {"Japão", 126000000, 5.08, 378000},
+        {"Austrália", 25000000, 1.39, 7692000}
+    };
+
+    embaralhar(cartas, NUM_CARTAS);
+
+    Carta jogador[3] = {cartas[0], cartas[1], cartas[2]};
+    Carta computador[3] = {cartas[3], cartas[4], cartas[5]};
+
+    int pontos = 0;
+    for (int i = 0; i < 3; i++) {
+        printf("\n=== Rodada %d ===\n", i + 1);
+        pontos += jogar_rodada(jogador[i], computador[i]);
+    }
+
+    printf("\nPontuação final: %d\n", pontos);
+    if (pontos > 0) {
+        printf("Parabéns, você venceu o jogo!\n");
+    } else if (pontos < 0) {
+        printf("O computador venceu o jogo!\n");
+    } else {
+        printf("O jogo terminou empatado!\n");
+    }
+
+    return 0;
+}
 
 
 
