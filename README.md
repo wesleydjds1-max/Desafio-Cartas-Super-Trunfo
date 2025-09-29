@@ -1,80 +1,57 @@
-# SuperTrunfo de Países em C
+# Super Trunfo Países - Cadastro de Cartas
 
-## Descrição
+A **TechNova** apresenta este projeto como parte do desenvolvimento de um jogo de **Super Trunfo** com tema "Países". Este programa em **C** permite cadastrar cartas com informações detalhadas sobre cidades, incluindo atributos básicos e propriedades derivadas, como densidade populacional e PIB per capita.
 
-Jogo de cartas SuperTrunfo com o tema "Países", desenvolvido em linguagem C. Cada carta representa um país e possui atributos numéricos como população, área territorial, PIB e IDH. O objetivo é comparar atributos das cartas para superar o adversário em cada rodada, até que um jogador fique com todas as cartas.
+## Objetivo
 
-## Funcionalidades
+O objetivo deste projeto é criar um sistema inicial de cadastro de cartas para o jogo Super Trunfo, aplicando conceitos fundamentais de programação em **C**, como:
 
-- Cartas dos países representadas por uma struct.
-- Carregamento de cartas a partir de um arquivo CSV.
-- Dois jogadores: humano vs humano ou humano vs computador.
-- Em cada rodada, o jogador escolhe um atributo para comparar.
-- O vencedor da rodada recebe a carta do adversário.
-- Interface em modo texto (console).
-- Código modular, dividido em funções para criação, distribuição, comparação e controle das rodadas.
+- Uso de variáveis, operadores e funções.
+- Entrada e saída de dados.
+- Estruturas (`struct`) para armazenar informações complexas.
+- Operadores matemáticos para cálculos derivados.
+- Operadores relacionais e modificadores de tipo.
 
-## Requisitos
+## Funcionamento
 
-- **Tema:** Países reais do mundo.
-- **Atributos:** Cada país possui pelo menos 4 atributos numéricos (população, área territorial, PIB, IDH).
-- **Estrutura de Dados:** Utilização de structs para representar as cartas.
-- **Jogabilidade:** Dois jogadores, cartas distribuídas igualmente, comparação de atributos, vencedor leva as cartas.
-- **Interface:** Modo texto.
+Cada carta cadastrada contém as seguintes informações:
 
-## Estrutura dos arquivos
+- Estado
+- Código
+- Nome da cidade
+- População
+- PIB (em bilhões)
+- Área (em km²)
+- Número de pontos turísticos
 
-- `main.c`: Código principal e fluxo do jogo.
-- `cartas.h` / `cartas.c`: Módulo para manipulação das cartas.
-- `paises.csv`: Arquivo com os dados dos países.
-- `README.md`: Documentação do projeto.
+O programa também calcula automaticamente:
 
-## Exemplo de estrutura de uma carta
+- **Densidade Populacional** (hab/km²)
+- **PIB per Capita**
 
-```c
-typedef struct {
-    char nome[50];
-    int populacao;
-    float area;
-    double pib;
-    float idh;
-} CartaPais;
-```
+## Tecnologias Utilizadas
 
-## Exemplo de entrada do arquivo paises.csv
-
-```
-Brasil,214000000,8515767.00,1847000000000.00,0.754
-Estados Unidos,331000000,9833520.00,22675271000000.00,0.921
-China,1439323776,9596961.00,17734000000000.00,0.768
-Japão,125800000,377930.00,4936800000000.00,0.925
-Alemanha,83100000,357386.00,4183170000000.00,0.942
-```
-
-## Como compilar
-
-```bash
-gcc main.c cartas.c -o supertrunfo
-```
+- Linguagem C
+- Compilador GCC (ou equivalente)
 
 ## Como executar
 
-```bash
-./supertrunfo
-```
+1. Certifique-se de ter o compilador **GCC** instalado.
+2. Baixe este repositório ou copie o arquivo `super_trunfo.c`.
+3. Compile o código:
+4. Execute o programa:
+./super_trunfo
+5. Estrutura do Projeto
+super_trunfo/
+│
+├── super_trunfo.c      # Código fonte em C
+├── README.md           # Descrição do projeto
 
-## Melhorias futuras (extras)
+Licença
 
-- Leitura dinâmica de países e atributos a partir de arquivo.
-- Estatísticas do jogo (rodadas, atributos mais escolhidos).
-- Implementação de IA para o computador escolher atributos de forma estratégica.
-- Animações simples ou mensagens para tornar o jogo mais divertido.
+Este projeto está licenciado sob a Licença MIT.
+Você pode usar, modificar e distribuir livremente o código, desde que mantenha os créditos ao autor.
 
----
-Projeto acadêmico desenvolvido para disciplina de programação.
-
-## O que implementar
-
-- Lógica do jogo (distribuição das cartas, rodadas, comparação, vencedor)
-- Interface interativa no console
-- Estatísticas finais (opcional)
+📌 Projeto desenvolvido como exercício de programação em C, focado em lógica, manipulação de dados e cálculos matemáticos.
+   ```bash
+   gcc super_trunfo.c -o super_trunfo
