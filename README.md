@@ -1,20 +1,23 @@
 # SuperTrunfo Países - Cadastro de Cartas
 
-A **TechNova** apresenta este projeto como parte do desenvolvimento de um jogo de **SuperTrunfo** com tema "Países". Este programa em **C** permite cadastrar cartas com informações detalhadas sobre cidades, incluindo atributos básicos e propriedades derivadas, como densidade populacional e PIB per capita.
+Este é um **projeto acadêmico** desenvolvido como parte das atividades da disciplina de Programação em Linguagem C da minha universidade.  
+O objetivo é criar um sistema inicial de cadastro de cartas para um jogo de **SuperTrunfo** com tema "Países", aplicando conceitos fundamentais de programação.
 
-## Objetivo
+## Sobre o Projeto
 
-O objetivo deste projeto é criar um sistema inicial de cadastro de cartas para o jogo Super Trunfo, aplicando conceitos fundamentais de programação em **C**, como:
+A **TechNova**, empresa fictícia deste exercício acadêmico, está desenvolvendo um jogo de Super Trunfo com tema "Países".  
+Este programa em **C** permite cadastrar cartas contendo informações detalhadas sobre cidades, incluindo atributos básicos e propriedades derivadas como densidade populacional e PIB per capita.
 
-- Uso de variáveis, operadores e funções.
-- Entrada e saída de dados.
-- Estruturas (`struct`) para armazenar informações complexas.
-- Operadores matemáticos para cálculos derivados.
-- Operadores relacionais e modificadores de tipo.
+## Objetivos
+
+- Implementar um sistema em C para cadastrar cartas do jogo Super Trunfo de Países.
+- Aplicar operadores matemáticos para cálculos de atributos derivados.
+- Utilizar operadores relacionais e modificadores de tipo.
+- Desenvolver habilidades em entrada e saída de dados e estruturas em C.
 
 ## Funcionamento
 
-Cada carta cadastrada contém as seguintes informações:
+Cada carta cadastrada conterá as seguintes informações:
 
 - Estado
 - Código
@@ -24,7 +27,7 @@ Cada carta cadastrada contém as seguintes informações:
 - Área (em km²)
 - Número de pontos turísticos
 
-O programa também calcula automaticamente:
+O programa calcula automaticamente:
 
 - **Densidade Populacional** (hab/km²)
 - **PIB per Capita**
