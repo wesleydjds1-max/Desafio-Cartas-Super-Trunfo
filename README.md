@@ -79,6 +79,7 @@ Siga as instruções para cadastrar as cartas.
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas!
+
 Para contribuir:
 
 - Faça um fork deste repositório.
