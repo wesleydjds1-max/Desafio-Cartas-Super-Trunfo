@@ -1,8 +1,4 @@
-Percebi alguns pequenos erros de formatação no seu README.md 😄. Aqui está a versão corrigida para copiar e colar, já ajustada para Markdown funcionar perfeitamente no GitHub:
 
----
-
-````markdown
 # SuperTrunfo Países - Cadastro de Cartas
 
 Este é um **projeto acadêmico** desenvolvido como parte das atividades da disciplina de Programação em Linguagem C da minha universidade.  
