@@ -69,12 +69,8 @@ O programa calcula automaticamente:
 3. Compile o código:
    ```bash
    gcc super_trunfo.c -o super_trunfo
-4. Execute o programa:
-
-bash
-Copiar código
-./super_trunfo
-Siga as instruções para cadastrar as cartas.
+4. Execute o programa.
+5. Siga as instruções para cadastrar as cartas.
 
 ## 🤝 Contribuição
 
