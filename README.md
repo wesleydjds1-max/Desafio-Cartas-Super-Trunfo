@@ -41,10 +41,13 @@ O programa calcula automaticamente:
 
 1. Certifique-se de ter o compilador **GCC** instalado.
 2. Baixe este repositório ou copie o arquivo `super_trunfo.c`.
-3. Compile o código: ```bash
+3. Compile o código:
+   ```bash
    gcc super_trunfo.c -o super_trunfo
-4. Execute o programa: ./super_trunfo
-5. Siga as instruções para cadastrar as cartas.
+5. Execute o programa:
+ ```bash
+ ./super_trunfo
+7. Siga as instruções para cadastrar as cartas.
 
 
 ## Licença
@@ -53,5 +56,4 @@ Este projeto está licenciado sob a Licença MIT.
 Você pode usar, modificar e distribuir livremente o código, desde que mantenha os créditos ao autor.
 
 📌 Projeto desenvolvido como exercício de programação em C, focado em lógica, manipulação de dados e cálculos matemáticos.
-   ```bash
-   gcc super_trunfo.c -o super_trunfo
+   
