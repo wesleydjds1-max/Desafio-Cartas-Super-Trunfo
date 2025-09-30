@@ -65,11 +65,11 @@ O programa calcula automaticamente:
 ## 🚀 Como Executar
 
 1. Certifique-se de ter o compilador **GCC** instalado.  
-2. Baixe este repositório ou copie o arquivo ''`super_trunfo.c`''.  
+2. Baixe este repositório ou copie o arquivo `super_trunfo.c`.  
 3. Compile o código:
-   ''_``gcc super_trunfo.c -o super_trunfo``_''.
+   ``gcc super_trunfo.c -o super_trunfo``
 4. Execute o programa:
-  '' _``./super_trunfo``_''.
+   ``./super_trunfo``
 5. Siga as instruções para cadastrar as cartas.
 
 ## 🤝 Contribuição
