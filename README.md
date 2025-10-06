@@ -57,8 +57,8 @@ O programa calcula automaticamente:
 
 ## 🛠 Tecnologias Utilizadas
 
-- Linguagem C  
-- Compilador GCC (ou equivalente)
+- Linguagem C;  
+- Compilador GCC (ou equivalente).
 
 ---
 
