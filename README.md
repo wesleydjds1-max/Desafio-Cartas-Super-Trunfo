@@ -5,7 +5,7 @@
 [![Status: Academic Project](https://img.shields.io/badge/Status-Academic%20Project-orange.svg)]
 
 📚 Projeto acadêmico desenvolvido como parte das atividades da disciplina de **Introdução à Programação de Computadores** da minha universidade.  
-O objetivo é criar um sistema inicial de cadastro de cartas para um jogo de **Super Trunfo** com tema "Países", aplicando conceitos fundamentais de programação.
+O objetivo é criar um sistema inicial de cadastro de cartas para um jogo de **SuperTrunfo** com tema "Países", aplicando conceitos fundamentais de programação.
 
 ---
 
@@ -111,4 +111,4 @@ Você pode usar, modificar e distribuir livremente o código, desde que mantenha
 Projeto desenvolvido como exercício acadêmico para consolidação dos conceitos fundamentais de Programação em C,
 incluindo manipulação de dados, cálculos matemáticos e lógica de comparação.
 
-🎓 _“A prática leva à maestria — e o Super Trunfo leva à diversão!”_
+🎓 _“A prática leva à maestria, e o SuperTrunfo leva à diversão!”_
