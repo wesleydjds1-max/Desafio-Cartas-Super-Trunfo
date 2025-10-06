@@ -40,18 +40,18 @@ Este programa em **C** permite cadastrar cartas contendo informações detalhada
 
 Cada carta cadastrada conterá as seguintes informações:
 
-- Estado  
-- Código  
-- Nome da cidade  
-- População  
-- PIB (em bilhões)  
-- Área (em km²)  
-- Número de pontos turísticos  
+- Estado;  
+- Código;  
+- Nome da cidade;  
+- População;  
+- PIB (em bilhões);
+- Área (em km²);  
+- Número de pontos turísticos.  
 
 O programa calcula automaticamente:
 
-- **Densidade Populacional** (hab/km²)  
-- **PIB per Capita**
+- **Densidade Populacional** (hab/km²);  
+- **PIB per Capita**.
 
 ---
 
