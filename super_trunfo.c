@@ -60,7 +60,7 @@ void exibirCarta(Carta carta) {
 
 int main() {
     Carta cartas[MAX_CARTAS];
-    int opcao, i;
+    int i;
 
     printf("=== Cadastro de Cartas - Super Trunfo Países ===\n");
 
