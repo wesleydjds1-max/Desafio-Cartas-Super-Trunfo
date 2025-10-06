@@ -4,7 +4,7 @@
 [![Language: C](https://img.shields.io/badge/Linguagem-C-blue.svg)]
 [![Status: Academic Project](https://img.shields.io/badge/Status-Academic%20Project-orange.svg)]
 
-📚 Projeto acadêmico desenvolvido como parte das atividades da disciplina de **Programação em Linguagem C** da minha universidade.  
+📚 Projeto acadêmico desenvolvido como parte das atividades da disciplina de **Introdução à Programação de Computadores** da minha universidade.  
 O objetivo é criar um sistema inicial de cadastro de cartas para um jogo de **Super Trunfo** com tema "Países", aplicando conceitos fundamentais de programação.
 
 ---
@@ -27,50 +27,58 @@ Este programa em **C** permite cadastrar cartas contendo informações detalhada
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objetivos  
 
-- Implementar um sistema em C para cadastrar cartas do jogo Super Trunfo de Países.  
-- Aplicar operadores matemáticos para cálculos de atributos derivados.  
-- Utilizar operadores relacionais e modificadores de tipo.
-- Desenvolver habilidades em entrada e saída de dados e estruturas em C.
+- Praticar o uso de **estruturas de dados básicas**, **tipos numéricos** e **operações matemáticas**;  
+- Implementar cálculos com **conversão de tipos** (casting) em C;  
+- Aplicar **operadores relacionais** e **conceitos de comparação lógica**;  
+- Desenvolver um sistema funcional e interativo de comparação entre cartas.  
 
 ---
 
-## ⚙️ Funcionamento
+## ⚙️ Funcionamento  
 
-Cada carta cadastrada conterá as seguintes informações:
+O programa solicita ao usuário que cadastre as informações de **duas cartas** do Super Trunfo:  
 
-- Estado;  
-- Código;  
-- Nome da cidade;  
-- População;  
-- PIB (em bilhões);
-- Área (em km²);  
-- Número de pontos turísticos.  
+| Atributo | Tipo | Descrição |
+|-----------|------|-----------|
+| Estado | `char` | Letra de 'A' a 'H' representando o estado |
+| Código da Carta | `char[]` | Letra do estado + número (ex: A01, B02) |
+| Nome da Cidade | `char[]` | Nome completo da cidade |
+| População | `unsigned long int` | Número de habitantes |
+| Área (km²) | `float` | Área da cidade |
+| PIB (bilhões R$) | `float` | Produto Interno Bruto |
+| Pontos Turísticos | `int` | Quantidade de pontos turísticos |
 
-O programa calcula automaticamente:
+Após o cadastro, o programa calcula automaticamente:
 
-- **Densidade Populacional** (hab/km²);  
-- **PIB per Capita**.
+- **Densidade Populacional:** `população / área`  
+- **PIB per Capita:** `(PIB * 1.000.000.000) / população`  
+- **Super Poder:**  
 
 ---
 
 ## 🛠 Tecnologias Utilizadas
 
-- Linguagem C;  
-- Compilador GCC (ou equivalente).
+- **Linguagem C;**  
+- **Compilador GCC (ou equivalente).**
+- - **Ambiente sugerido: Replit, VS Code ou Dev-C++.**  
 
 ---
 
-## 🚀 Como Executar?
+## 🚀 Como Executar  
 
-1. Certifique-se de ter o compilador **GCC** instalado.  
-2. Baixe este repositório ou copie o arquivo `super_trunfo.c`.  
-3. Compile o código:
-   ``gcc super_trunfo.c -o super_trunfo``.
-4. Execute o programa:
-   ``./super_trunfo``.
-5. Siga as instruções para cadastrar as cartas.
+1. **Baixe o arquivo principal:**  
+   `super_trunfo.c`
+
+2. **Compile o programa:**  
+   ```bash```
+   ```gcc super_trunfo.c -o super_trunfo```
+3. Execute:
+```bash```
+`./super_trunfo`
+
+---
 
 ## 🤝 Contribuição
 
@@ -87,9 +95,18 @@ Para contribuir:
 - Push para a branch (git push origin minha-contribuicao).
 
 - Abra um Pull Request.
+  
+---
 
 ## 📜 Licença
 Este projeto está licenciado sob a Licença MIT.
 Você pode usar, modificar e distribuir livremente o código, desde que mantenha os créditos ao autor.
 
-📌 Projeto desenvolvido como exercício acadêmico em C, focado em lógica, manipulação de dados e cálculos matemáticos.
+---
+
+## 🧩 Créditos
+
+Projeto desenvolvido como exercício acadêmico para consolidação dos conceitos fundamentais de Programação em C,
+incluindo manipulação de dados, cálculos matemáticos e lógica de comparação.
+
+🎓 _“A prática leva à maestria — e o Super Trunfo leva à diversão!”_
