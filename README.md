@@ -72,8 +72,8 @@ Após o cadastro, o programa calcula automaticamente:
    `super_trunfo.c`
 
 2. **Compile o programa:**  
-   ```bash```
-   ```gcc super_trunfo.c -o super_trunfo```
+ ```bash```
+ ```gcc super_trunfo.c -o super_trunfo```
 3. **Execute:**                                       
  ```bash```
  ```./super_trunfo```
