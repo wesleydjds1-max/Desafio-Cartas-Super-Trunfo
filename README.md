@@ -86,15 +86,17 @@ Contribuições são bem-vindas!
 
 Para contribuir:
 
-- Faça um fork deste repositório.
-
-- Crie uma branch com sua modificação (git checkout -b minha-contribuicao).
-
-- Commit suas alterações (git commit -m "Minha contribuição").
-
-- Push para a branch (git push origin minha-contribuicao).
-
-- Abra um Pull Request.
+1. Faça um fork deste repositório.
+2. Crie uma branch para sua modificação:
+  ```bash```
+  ```git commit -m "Minha contribuição"```
+3. Commit suas alterações:
+   ```bash```
+   ```git push origin minha-contribuicao```
+5. Push para a branch:
+   ```bash```
+   ```git push origin minha-contribuicao```
+6. Abra um Pull Request.
   
 ---
 
