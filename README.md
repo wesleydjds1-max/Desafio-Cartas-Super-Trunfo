@@ -62,7 +62,7 @@ Após o cadastro, o programa calcula automaticamente:
 
 - **Linguagem C;**  
 - **Compilador GCC (ou equivalente).**
-- - **Ambiente sugerido: Replit, VS Code ou Dev-C++.**  
+- **Ambiente sugerido: Replit, VS Code ou Dev-C++.**  
 
 ---
 
