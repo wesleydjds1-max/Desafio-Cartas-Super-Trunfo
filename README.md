@@ -62,7 +62,7 @@ O programa calcula automaticamente:
 
 ---
 
-## 🚀 Como Executar
+## 🚀 Como Executar?
 
 1. Certifique-se de ter o compilador **GCC** instalado.  
 2. Baixe este repositório ou copie o arquivo `super_trunfo.c`.  
