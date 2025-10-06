@@ -29,9 +29,9 @@ Este programa em **C** permite cadastrar cartas contendo informações detalhada
 
 ## 🎯 Objetivos
 
-- Implementar um sistema em C para cadastrar cartas do jogo Super Trunfo de Países;  
-- Aplicar operadores matemáticos para cálculos de atributos derivados;  
-- Utilizar operadores relacionais e modificadores de tipo;  
+- Implementar um sistema em C para cadastrar cartas do jogo Super Trunfo de Países.  
+- Aplicar operadores matemáticos para cálculos de atributos derivados.  
+- Utilizar operadores relacionais e modificadores de tipo.
 - Desenvolver habilidades em entrada e saída de dados e estruturas em C.
 
 ---
