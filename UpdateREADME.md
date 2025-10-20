@@ -112,3 +112,4 @@ Projeto desenvolvido como exercício acadêmico para consolidação dos conceito
 incluindo manipulação de dados, cálculos matemáticos e lógica de comparação.
 
 🎓 _“A prática leva à maestria, e o SuperTrunfo leva à diversão!”_
+
